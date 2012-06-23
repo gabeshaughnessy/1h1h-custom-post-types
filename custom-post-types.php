@@ -10,18 +10,23 @@ Author:       Gabe Shaughnessy
 Author URI:   http://gabesimagination.com/
 
 **************************************************************************/
+//set up meta boxes
+global $meta_boxes;
+
 //create custom post types
 // prefix for the site is hh_
+//artists
+require_once('artist_creator.php');
 //proposals
 require_once('proposal_creator.php');
+
 //projects
 require_once('project_creator.php');
 //service
 require_once('service_creator.php');
 //case_study
 require_once('case_study_creator.php');
-//artists
-require_once('artist_creator.php');
+
 //clients
 require_once('client_creator.php');
 //press
@@ -40,6 +45,10 @@ require_once('hhpress_creator.php');
 //rental equipment\
 //require_once(TEMPLATEPATH. '/custom/rental_creator.php');
 
+//Custom metabox on pages and posts too 
+require_once('page_metaboxes.php');
+
+//Set up taxonomies to relate everything
 require_once('hh_taxonomies.php');
 
 //pulls in the function to add columns to the admin views for custom post types
