@@ -308,6 +308,44 @@ $meta_boxes[] = array(
 );
 
 $meta_boxes[] = array(
+	'id' => 'hh_content_meta_box',
+	'title' => 'Content Settings',
+	'pages' => array('page'), // multiple post types -----edit this to change which post type the custom meta box appears on
+	'context' => 'side',
+	'priority' => 'high',
+	'show_names' => true, // Show field names on the left
+	'fields' => array( 
+		array(
+			'name' => 'Content Post Type',
+			'desc' => 'which post type should this page display?',
+			'id' => $prefix . 'content_post_type',
+			'type' => 'select', 
+			'options' => array(
+				array('name' => 'Artists', 'value' => 'hh_artist'),
+				array('name' => 'Projects', 'value' => 'hh_project'),
+				array('name' => 'Services', 'value' => 'hh_service'),
+				array('name' => 'Case Studies', 'value' => 'hh_casestudy'),
+				array('name' => 'Clients', 'value' => 'hh_client')				
+			)
+		),
+		array(
+			'name' => 'Filter Taxonomy',
+			'desc' => 'which taxonomy should this page filter by?',
+			'id' => $prefix . 'filter_taxonomy',
+			'type' => 'select', 
+			'options' => array(
+				array('name' => 'Classification', 'value' => 'hh_classification'),
+				array('name' => 'Related Service', 'value' => 'hh_related_service'),
+				array('name' => 'Related Project', 'value' => 'hh_related_project'),
+				array('name' => 'Related Client', 'value' => 'hh_related_client'),
+				array('name' => 'Related Artist', 'value' => 'hh_related_artist')				
+			)
+		),
+			)
+);
+
+
+$meta_boxes[] = array(
 	'id' => 'event_meta_box',
 	'title' => 'event Information',
 	'pages' => array('hh_event'), // multiple post types -----edit this to change which post type the custom meta box appears on
