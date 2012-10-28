@@ -324,7 +324,7 @@ $meta_boxes[] = array(
 				array('name' => 'Artists', 'value' => 'hh_artist'),
 				array('name' => 'Projects', 'value' => 'hh_project'),
 				array('name' => 'Services', 'value' => 'hh_service'),
-				array('name' => 'Case Studies', 'value' => 'hh_casestudy'),
+				array('name' => 'Case Studies', 'value' => 'hh_case_study'),
 				array('name' => 'Clients', 'value' => 'hh_client')				
 			)
 		),
