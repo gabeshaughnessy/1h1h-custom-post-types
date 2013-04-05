@@ -306,7 +306,26 @@ $meta_boxes[] = array(
 		)
 	)
 );
-
+$meta_boxes[] = array(
+	'id' => 'hh_tour_meta_box',
+	'title' => 'Tour Settings',
+	'pages' => array('page', 'hh_project', 'hh_service', 'hh_client'), // multiple post types -----edit this to change which post type the custom meta box appears on
+	'context' => 'side',
+	'priority' => 'high',
+	'show_names' => true, // Show field names on the left
+	'fields' => array( 
+	array(
+		'name' => 'Add to Tour',
+		'desc' => 'Add this item to a tour page:',
+		'id' => $prefix . 'tour',
+		'type' => 'select', 
+		'options' => array(
+			array('name' => '-- select a tour --', 'value' => ''),
+			array('name' => 'Shop Tour', 'value' => 'shop-tour')								
+		)
+	),
+	)
+	);
 $meta_boxes[] = array(
 	'id' => 'hh_content_meta_box',
 	'title' => 'Content Settings',
@@ -321,11 +340,13 @@ $meta_boxes[] = array(
 			'id' => $prefix . 'content_post_type',
 			'type' => 'select', 
 			'options' => array(
+				array('name' => '-- select --', 'value' => ''),	
 				array('name' => 'Artists', 'value' => 'hh_artist'),
 				array('name' => 'Projects', 'value' => 'hh_project'),
 				array('name' => 'Services', 'value' => 'hh_service'),
 				array('name' => 'Case Studies', 'value' => 'hh_case_study'),
-				array('name' => 'Clients', 'value' => 'hh_client')				
+				array('name' => 'Clients', 'value' => 'hh_client'),
+							
 			)
 		),
 		array(
@@ -334,6 +355,7 @@ $meta_boxes[] = array(
 			'id' => $prefix . 'filter_taxonomy',
 			'type' => 'select', 
 			'options' => array(
+				
 				array('name' => 'Classification', 'value' => 'hh_classification'),
 				array('name' => 'Related Service', 'value' => 'hh_related_service'),
 				array('name' => 'Related Project', 'value' => 'hh_related_project'),
@@ -341,6 +363,7 @@ $meta_boxes[] = array(
 				array('name' => 'Related Artist', 'value' => 'hh_related_artist')				
 			)
 		),
+		
 			)
 );
 
