@@ -7,6 +7,7 @@ $meta_boxes = array();
 
 $meta_boxes[] = array(
 	'id' => 'hh_page_meta_box',
+	
 	'title' => 'Media Box',
 	'pages' => array('page'), // multiple post types -----edit this to change which post type the custom meta box appears on
 	'context' => 'normal',
